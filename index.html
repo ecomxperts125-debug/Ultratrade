@@ -1,0 +1,809 @@
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>4 in 1 Master Trading Books Combo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Poppins', sans-serif; background: #0a0a0a; color: #fff; overflow-x: hidden; }
+
+    /* ===== SHAKE ANIMATION ===== */
+    @keyframes shake {
+      0%, 100% { transform: translateX(0) rotate(0deg); }
+      10% { transform: translateX(-4px) rotate(-1deg); }
+      20% { transform: translateX(4px) rotate(1deg); }
+      30% { transform: translateX(-4px) rotate(-1deg); }
+      40% { transform: translateX(4px) rotate(1deg); }
+      50% { transform: translateX(-3px) rotate(0deg); }
+      60% { transform: translateX(3px) rotate(0deg); }
+      70% { transform: translateX(-2px) rotate(0deg); }
+      80% { transform: translateX(2px) rotate(0deg); }
+      90% { transform: translateX(-1px) rotate(0deg); }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(254,192,0,0.7), 0 8px 32px rgba(254,192,0,0.3); }
+      50% { box-shadow: 0 0 0 12px rgba(254,192,0,0), 0 8px 32px rgba(254,192,0,0.6); }
+    }
+
+    /* ===== BUY BUTTON - ANIMATED SHAKE ===== */
+    .buy-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #FEC000, #ff9500);
+      color: #000;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      padding: 18px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      animation: shake 2.5s ease-in-out infinite, pulse-glow 2s ease-in-out infinite;
+      transition: transform 0.2s ease;
+      letter-spacing: 0.5px;
+    }
+    .buy-btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      animation: shimmer 2.5s ease-in-out infinite;
+    }
+    @keyframes shimmer {
+      0% { left: -100%; }
+      50%, 100% { left: 150%; }
+    }
+    .buy-btn:hover {
+      animation: none;
+      transform: scale(1.05) translateY(-2px);
+      box-shadow: 0 12px 40px rgba(254,192,0,0.6);
+    }
+    .buy-btn del { font-weight: 500; opacity: 0.65; margin-right: 6px; }
+    .buy-btn-wrap { text-align: center; padding: 20px 16px 30px; }
+    .buy-btn-wrap .btn-label { font-size: 13px; color: #aaa; margin-top: 8px; letter-spacing: 1px; }
+
+    /* ===== SECTION: HERO HEADER ===== */
+    .hero-header {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a0a00 50%, #0a0a0a 100%);
+      padding: 40px 20px 20px;
+      text-align: center;
+      border-bottom: 2px solid #FEC000;
+    }
+    .hero-header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(22px, 5vw, 40px);
+      font-weight: 900;
+      background: linear-gradient(135deg, #FEC000, #ff9500, #FEC000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 1px;
+      line-height: 1.2;
+    }
+
+    /* ===== MARQUEE ===== */
+    .rtl-wrap {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding: 20px 0;
+      background: #0d0d0d;
+      --w: 300px; --h: 445px; --gap: 20px;
+      --radius: 12px; --speed: 22s;
+      --border: 8px; --gap-color: #1a1a1a;
+      --shadow: 0 8px 24px rgba(0,0,0,0.5);
+    }
+    .rtl-track {
+      display: inline-flex;
+      width: max-content;
+      align-items: center;
+      padding-inline: var(--gap);
+      will-change: transform;
+      animation: rtl-marq var(--speed) linear infinite;
+    }
+    .rtl-wrap:hover .rtl-track { animation-play-state: paused; }
+    .rtl-item { flex: 0 0 auto; margin-right: var(--gap) !important; }
+    .rtl-item:last-child { margin-right: 0 !important; }
+    .rtl-item img {
+      width: var(--w); height: var(--h);
+      object-fit: cover; display: block;
+      border-radius: var(--radius);
+      border: var(--border) solid var(--gap-color);
+      box-shadow: var(--shadow);
+      background: #111;
+      transition: transform .3s ease;
+    }
+    .rtl-item img:hover { transform: scale(1.04); }
+    @keyframes rtl-marq {
+      0% { transform: translate3d(0,0,0); }
+      100% { transform: translate3d(-50%,0,0); }
+    }
+    @media (max-width: 767px) {
+      .rtl-wrap { --w: 200px; --h: 296px; --gap: 14px; --border: 5px; --radius: 8px; --speed: 16s; }
+    }
+
+    /* ===== SECTION WRAPPER ===== */
+    .section { padding: 40px 20px; max-width: 1100px; margin: 0 auto; }
+    .section-dark { background: #0d0d0d; padding: 40px 20px; }
+    .section-dark > .section-inner { max-width: 1100px; margin: 0 auto; }
+
+    /* ===== HERO SUBTITLE ===== */
+    .hero-sub {
+      background: linear-gradient(135deg, #111 0%, #1c1200 100%);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .hero-sub h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(18px, 4vw, 30px);
+      font-weight: 800;
+      color: #fff;
+      max-width: 800px;
+      margin: 0 auto 20px;
+      line-height: 1.3;
+    }
+
+    /* ===== LIMITED TIME BADGE ===== */
+    .badge-wrap { display: flex; justify-content: center; margin: 12px 0; }
+    .limited-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #1a2e1a; border: 1.5px solid #4CAF50;
+      color: #4CAF50; font-weight: 700; font-size: 13px;
+      padding: 6px 16px; border-radius: 30px; letter-spacing: 1px;
+    }
+    .limited-badge svg { width: 14px; height: 14px; }
+
+    /* ===== REVIEWS HEADER ===== */
+    .reviews-header {
+      display: flex; align-items: center; gap: 14px;
+      background: #111; border-radius: 14px;
+      padding: 18px 24px; margin: 20px 0;
+      border: 1px solid #222;
+    }
+    .reviews-header .clock-icon { color: #FEC000; font-size: 28px; }
+    .reviews-header .rev-title { font-size: clamp(16px, 3vw, 20px); font-weight: 700; color: #FEC000; }
+    .reviews-header .rev-sub { font-size: 13px; color: #aaa; }
+
+    /* ===== SAMPLE CAROUSEL ===== */
+    .simple-carousel { overflow: hidden; border-radius: 12px; }
+    .simple-carousel .swiper-container {
+      display: flex; overflow-x: auto; gap: 16px;
+      scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+      padding: 10px 4px; scrollbar-width: none;
+    }
+    .simple-carousel .swiper-container::-webkit-scrollbar { display: none; }
+    .simple-carousel .slide {
+      flex: 0 0 85%; max-width: 340px;
+      scroll-snap-align: center; border-radius: 12px; overflow: hidden;
+    }
+    .simple-carousel .slide img { width: 100%; display: block; border-radius: 12px; }
+
+    /* ===== BOOK SECTIONS ===== */
+    .book-section {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 16px;
+      padding: 28px 20px;
+      margin-bottom: 28px;
+    }
+    .book-section img.book-cover {
+      width: 100%; max-width: 260px;
+      display: block; margin: 0 auto 20px;
+      border-radius: 10px;
+      box-shadow: 0 12px 40px rgba(254,192,0,0.2);
+    }
+    .book-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(16px, 3.5vw, 22px);
+      font-weight: 800; color: #FEC000;
+      text-align: center; margin-bottom: 12px;
+    }
+    .book-desc {
+      font-size: 14px; color: #bbb; line-height: 1.7;
+      text-align: center; max-width: 600px; margin: 0 auto;
+    }
+
+    /* ===== WHAT YOU LEARN ===== */
+    .learn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 20px; }
+    @media (max-width: 500px) { .learn-grid { grid-template-columns: 1fr; } }
+    .learn-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      background: #151515; border: 1px solid #222;
+      border-radius: 12px; padding: 14px 16px;
+    }
+    .learn-item .arrow { color: #FEC000; font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+    .learn-item span { font-size: 14px; font-weight: 600; color: #ddd; line-height: 1.4; }
+
+    /* ===== SECTION TITLE ===== */
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(20px, 4.5vw, 32px);
+      font-weight: 900; text-align: center;
+      color: #fff; margin-bottom: 24px;
+    }
+    .section-title span { color: #FEC000; }
+
+    /* ===== REVIEW CARDS ===== */
+    .review-card {
+      background: #111; border: 1px solid #222;
+      border-radius: 16px; padding: 22px 20px;
+      margin-bottom: 20px;
+    }
+    .reviewer-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .reviewer-avatar { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #FEC000; }
+    .reviewer-name { font-weight: 700; font-size: 15px; color: #fff; }
+    .reviewer-exp { font-size: 12px; color: #888; }
+    .review-text { font-size: 13.5px; color: #bbb; line-height: 1.7; max-height: 120px; overflow: hidden; transition: max-height 0.4s ease; }
+    .review-text.expanded { max-height: 1000px; }
+    .read-more-btn { color: #FEC000; font-size: 12px; font-weight: 600; background: none; border: none; cursor: pointer; margin-top: 8px; padding: 0; }
+
+    /* ===== TRUST BAR ===== */
+    .trust-bar {
+      background: linear-gradient(135deg, #111200, #0a0a0a);
+      border: 1px solid #333; border-radius: 16px;
+      padding: 24px 20px; text-align: center; margin: 20px 0;
+    }
+    .trust-bar .trust-num { font-family: 'Montserrat', sans-serif; font-size: 42px; font-weight: 900; color: #FEC000; }
+    .trust-bar .trust-label { font-size: 14px; color: #aaa; margin-top: 4px; }
+    .trust-row { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 16px; }
+    .trust-stat { text-align: center; }
+    .trust-stat .val { font-size: 22px; font-weight: 800; color: #fff; }
+    .trust-stat .lbl { font-size: 11px; color: #777; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ===== CHECK THOUGHTS ===== */
+    .thought-item {
+      display: flex; align-items: flex-start; gap: 12px;
+      background: #111; border: 1px solid #1e1e1e;
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 12px;
+    }
+    .thought-item .emoji { font-size: 22px; flex-shrink: 0; }
+    .thought-item p { font-size: 14px; color: #ccc; line-height: 1.5; }
+
+    /* ===== FAQ ===== */
+    .faq-wrap { max-width: 900px; margin: 0 auto; }
+    .faq details {
+      background: #111; border: 1px solid #2a2a2a;
+      border-radius: 12px; margin: 12px 0; overflow: hidden;
+    }
+    .faq summary {
+      list-style: none; cursor: pointer;
+      display: flex; gap: 12px; align-items: center;
+      padding: 16px 18px; font-weight: 600;
+      font-size: clamp(14px, 2.5vw, 17px); color: #fff;
+    }
+    .faq summary::before {
+      content: "+"; display: grid; place-items: center;
+      width: 26px; height: 26px; border-radius: 8px;
+      border: 2px solid #FEC000; color: #FEC000;
+      font-weight: 900; flex-shrink: 0;
+    }
+    .faq details[open] summary::before { content: "–"; }
+    .faq details[open] summary { border-bottom: 1px solid #2a2a2a; color: #FEC000; }
+    .faq .panel { background: #151515; padding: 16px 20px; color: #bbb; font-size: 14px; line-height: 1.7; }
+
+    /* ===== FEATURES GRID ===== */
+    .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+    @media (max-width: 600px) { .features-grid { grid-template-columns: 1fr; } }
+    .feature-card {
+      background: #111; border: 1px solid #1e1e1e;
+      border-radius: 14px; padding: 20px;
+    }
+    .feature-card .icon { font-size: 28px; margin-bottom: 10px; }
+    .feature-card h3 { font-size: 15px; font-weight: 700; color: #FEC000; margin-bottom: 8px; text-decoration: underline; }
+    .feature-card p { font-size: 13px; color: #999; line-height: 1.6; }
+
+    /* ===== STICKY CTA ===== */
+    .sticky-cta {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      z-index: 9999; background: #000;
+      padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+      display: flex; justify-content: center;
+      gap: 12px; align-items: center;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.6);
+      border-top: 2px solid #FEC000;
+    }
+    .sticky-cta a {
+      flex: 1; max-width: 320px;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center; padding: 12px 16px;
+      border-radius: 10px; min-height: 52px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700; font-size: 14px;
+      text-decoration: none;
+      background: linear-gradient(135deg, #FEC000, #ff9500);
+      color: #000;
+      animation: shake 3s ease-in-out infinite, pulse-glow 2s ease-in-out infinite;
+    }
+    .sticky-cta a:hover { animation: none; transform: scale(1.03); }
+    .sticky-cta .price { display: flex; gap: 6px; align-items: baseline; margin-top: 2px; }
+    .sticky-cta .old { text-decoration: line-through; opacity: 0.6; font-size: 12px; }
+    .sticky-cta .new { font-weight: 800; font-size: 15px; }
+
+    body { padding-bottom: 90px; }
+
+    /* ===== DIVIDER ===== */
+    .gold-divider { height: 2px; background: linear-gradient(90deg, transparent, #FEC000, transparent); margin: 8px 0; }
+
+    /* ===== DISCLAIMER ===== */
+    .disclaimer {
+      font-size: 11px; color: #555; text-align: center;
+      padding: 8px 16px; font-style: italic;
+    }
+
+    /* ===== VIDEO GRID ===== */
+    .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+    @media (max-width: 600px) { .video-grid { grid-template-columns: 1fr; } }
+    .video-wrap { border-radius: 12px; overflow: hidden; background: #111; }
+    .video-wrap video { width: 100%; display: block; max-height: 260px; object-fit: cover; }
+    .video-label { font-size: 11px; color: #e53935; text-align: center; padding: 6px; font-weight: 600; letter-spacing: 0.5px; }
+
+    /* ===== BUYER REVIEWS IMAGES ===== */
+    .review-img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+    .review-img-grid img { width: 100%; border-radius: 10px; display: block; }
+    @media (max-width: 500px) { .review-img-grid { grid-template-columns: 1fr; } }
+
+    /* ===== CASE STUDY ===== */
+    .case-study-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(14px, 3vw, 18px); font-weight: 700;
+      color: #aaa; text-align: center; margin-bottom: 4px;
+    }
+
+    /* footer space */
+    .footer-space { height: 20px; }
+  </style>
+</head>
+<body>
+
+<!-- ===== HERO HEADER ===== -->
+<div class="hero-header">
+  <h1>4 IN 1 MASTER TRADING<br>BOOKS COMBO</h1>
+</div>
+
+<!-- ===== MARQUEE - BOOK COVERS ===== -->
+<div class="rtl-wrap">
+  <div class="rtl-track">
+    <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2025/11/1-Candlesticks-Mastery-2.webp" alt="Candlesticks Mastery"></div>
+    <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2025/11/2.-Chart-Patterns-That-Print-Money-2.webp" alt="Chart Patterns"></div>
+    <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2025/11/Book4-100-Candlesticks-Patterns-2.webp" alt="100 Candlesticks"></div>
+    <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2025/11/3.-Chart-Patterns-DIAGRAMS-2.webp" alt="Chart Diagrams"></div>
+    <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2025/11/1-Candlesticks-Mastery-2.webp" alt="Candlesticks Mastery"></div>
+    <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2025/11/2.-Chart-Patterns-That-Print-Money-2.webp" alt="Chart Patterns"></div>
+    <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2025/11/Book4-100-Candlesticks-Patterns-2.webp" alt="100 Candlesticks"></div>
+    <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2025/11/3.-Chart-Patterns-DIAGRAMS-2.webp" alt="Chart Diagrams"></div>
+  </div>
+</div>
+
+<!-- ===== HERO SUBTITLE + BUY BTN #1 ===== -->
+<div class="hero-sub">
+  <h2>The Ultimate 4-in-1 Trading Books Combo for Serious Profit-Makers — Learn What Actually Works</h2>
+  <div class="badge-wrap">
+    <span class="limited-badge">
+      <svg viewBox="0 0 16 17" fill="none"><path fill="green" stroke="green" stroke-width="1.333" d="M8 1.836H1.334v6.667l6.193 6.193a1.617 1.617 0 0 0 2.28 0l4.387-4.387a1.62 1.62 0 0 0 0-2.28z"/></svg>
+      LIMITED TIME OFFER
+    </span>
+  </div>
+  <!-- BUY BUTTON #1 -->
+  <div class="buy-btn-wrap">
+    <a href="https://superprofile.bio/vp/5000--2d---3d-stories-bundle--71" class="buy-btn">
+      🛒 BUY DIGITAL COPY &nbsp;<del>₹1399</del>&nbsp; ₹390/-
+    </a>
+    <div class="btn-label">INSTANT DOWNLOAD • LIFETIME ACCESS</div>
+  </div>
+</div>
+
+<div class="gold-divider"></div>
+
+<!-- ===== REVIEWS TICKER ===== -->
+<div class="section-dark">
+  <div class="section-inner">
+    <div class="reviews-header">
+      <div class="clock-icon">⏱️</div>
+      <div>
+        
+</div>
+
+<!-- ===== SAMPLE PAGES HEADER ===== -->
+<div class="section" style="padding-bottom:10px;">
+  <div class="section-title">📖 Some <span>Sample Pages</span></div>
+</div>
+
+<!-- ===== BOOK 1 ===== -->
+<div class="section" style="padding-top:10px;">
+  <div class="book-section">
+    <img class="book-cover" src="https://learnvestor.com/wp-content/uploads/2025/11/1-Candlesticks-Mastery-2-722x1024.webp" alt="Candlesticks Mastery">
+    <div class="book-title">📚 CANDLESTICKS LIKE A PRO TRADER</div>
+    <div class="book-desc">Learn the Candles. Decode the Charts. Master Your Mind. Dominate the Market. This book breaks down high-value, visual candle patterns that reveal exactly when to buy, when to sell, and when to stay out — even if you're just starting your trading journey.</div>
+    <div class="rtl-wrap" style="margin:20px -20px 0;">
+      <div class="rtl-track">
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/1-Candlesticks-Mastery-4.webp" alt="sample page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/1-Candlesticks-Mastery-5.webp" alt="sample page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/1-Candlesticks-Mastery-6.webp" alt="sample page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/1-Candlesticks-Mastery-7.webp" alt="sample page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/1-Candlesticks-Mastery-8.webp" alt="sample page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/1-Candlesticks-Mastery-9.webp" alt="sample page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/1-Candlesticks-Mastery-10.webp" alt="sample page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/1-Candlesticks-Mastery-4.webp" alt="sample page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/1-Candlesticks-Mastery-5.webp" alt="sample page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/1-Candlesticks-Mastery-6.webp" alt="sample page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/1-Candlesticks-Mastery-7.webp" alt="sample page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/1-Candlesticks-Mastery-8.webp" alt="sample page"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOK 2 -->
+  <div class="book-section">
+    <img class="book-cover" src="https://learnvestor.com/wp-content/uploads/2025/11/2.-Chart-Patterns-That-Print-Money-2-722x1024.webp" alt="Chart Patterns">
+    <div class="book-title">💰 CHART PATTERNS THAT PRINTS MONEY</div>
+    <div class="book-desc">Discover the exact chart patterns smart traders use to catch big moves before they happen. This book reveals real-world, highly visual trading patterns that show you where to buy, where to sell, and how to avoid traps — even if you're a beginner.</div>
+    <div class="rtl-wrap" style="margin:20px -20px 0;">
+      <div class="rtl-track">
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/2.-Chart-Patterns-That-Print-Money-3.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/2.-Chart-Patterns-That-Print-Money-4.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/2.-Chart-Patterns-That-Print-Money-5.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/2.-Chart-Patterns-That-Print-Money-6.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/2.-Chart-Patterns-That-Print-Money-7.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/2.-Chart-Patterns-That-Print-Money-8.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/2.-Chart-Patterns-That-Print-Money-3.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/2.-Chart-Patterns-That-Print-Money-4.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/2.-Chart-Patterns-That-Print-Money-5.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/2.-Chart-Patterns-That-Print-Money-6.webp" alt="page"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOK 3 -->
+  <div class="book-section">
+    <img class="book-cover" src="https://learnvestor.com/wp-content/uploads/2025/11/Book4-100-Candlesticks-Patterns-2-722x1024.webp" alt="100 Candlesticks">
+    <div class="book-title">🕯️ 100+ CANDLESTICK PATTERNS</div>
+    <div class="book-desc">Learn the candlestick formations top traders use to spot reversals, breakouts, and hidden traps before the crowd reacts. This book features 100+ visual patterns with explanations, entry–exit rules, and the trading psychology behind each move.</div>
+    <div class="rtl-wrap" style="margin:20px -20px 0;">
+      <div class="rtl-track">
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/Book4-100-Candlesticks-Patterns-3.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/Book4-100-Candlesticks-Patterns-4.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/Book4-100-Candlesticks-Patterns-6.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/Book4-100-Candlesticks-Patterns-7.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/Book4-100-Candlesticks-Patterns-8.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/Book4-100-Candlesticks-Patterns-3.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/Book4-100-Candlesticks-Patterns-4.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/Book4-100-Candlesticks-Patterns-6.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/Book4-100-Candlesticks-Patterns-7.webp" alt="page"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOK 4 -->
+  <div class="book-section">
+    <img class="book-cover" src="https://learnvestor.com/wp-content/uploads/2025/11/3.-Chart-Patterns-DIAGRAMS-2-722x1024.webp" alt="Chart Patterns Mastery">
+    <div class="book-title">📊 100+ CHART PATTERNS MASTERY</div>
+    <div class="book-desc">Unlock the advanced chart patterns used by professional traders. This visually reveals 100+ powerful formations showing where to buy, where to sell, &amp; how to avoid false breakouts with explanations, entry–exit rules, and trader psychology behind every setup.</div>
+    <div class="rtl-wrap" style="margin:20px -20px 0;">
+      <div class="rtl-track">
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/3.-Chart-Patterns-DIAGRAMS-3.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/3.-Chart-Patterns-DIAGRAMS-4.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/3.-Chart-Patterns-DIAGRAMS-5.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/3.-Chart-Patterns-DIAGRAMS-6.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/3.-Chart-Patterns-DIAGRAMS-7.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/3.-Chart-Patterns-DIAGRAMS-8.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/3.-Chart-Patterns-DIAGRAMS-9.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/3.-Chart-Patterns-DIAGRAMS-3.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/3.-Chart-Patterns-DIAGRAMS-4.webp" alt="page"></div>
+        <div class="rtl-item"><img src="https://learnvestor.com/wp-content/uploads/2026/03/3.-Chart-Patterns-DIAGRAMS-5.webp" alt="page"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMBO IMAGE -->
+  <div style="text-align:center; margin: 20px 0;">
+    <img src="https://learnvestor.com/wp-content/uploads/2025/11/The-Trading-Quintessence-4-Pillars-of-Market-Mastery-Candlesticks-Patterns-Psychology-and-Strategy-1024x1024.webp"
+      alt="Combo" style="max-width:300px; width:100%; border-radius:14px; box-shadow:0 12px 40px rgba(254,192,0,0.25);">
+  </div>
+
+  <!-- BUY BUTTON #2 -->
+  <div class="buy-btn-wrap">
+    <a href="https://superprofile.bio/vp/5000--2d---3d-stories-bundle--71" class="buy-btn">
+      ⚡ BUY DIGITAL COPY &nbsp;<del>₹1399</del>&nbsp; ₹390/-
+    </a>
+    <div class="btn-label">SOFT COPY • INSTANT ACCESS • ALL 4 BOOKS</div>
+  </div>
+</div>
+
+<div class="gold-divider"></div>
+
+<!-- ===== WHAT YOU'LL LEARN ===== -->
+<div class="section-dark">
+  <div class="section-inner">
+    <div class="section-title">🎯 WHAT YOU'LL <span>LEARN</span></div>
+    <div class="learn-grid">
+      <div class="learn-item"><span class="arrow">▶</span><span>Master Every Candlestick &amp; Chart Pattern</span></div>
+      <div class="learn-item"><span class="arrow">▶</span><span>Enter Trades at the Perfect Time</span></div>
+      <div class="learn-item"><span class="arrow">▶</span><span>Place Smart Stop-Loss &amp; Targets</span></div>
+      <div class="learn-item"><span class="arrow">▶</span><span>Build High RRR, Low-Risk Trades</span></div>
+      <div class="learn-item"><span class="arrow">▶</span><span>Follow a Complete Trading System</span></div>
+      <div class="learn-item"><span class="arrow">▶</span><span>Trade With Full Confidence &amp; Discipline</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== BUYER REVIEWS IMAGES ===== -->
+<div class="section">
+  <div class="section-title">📸 LOOK WHAT OUR <span>BUYERS SAY</span></div>
+  <div class="review-img-grid">
+    <img src="https://learnvestor.com/wp-content/uploads/2025/11/1-1-724x1024.webp" alt="buyer review">
+    <img src="https://learnvestor.com/wp-content/uploads/2025/11/2-724x1024.webp" alt="buyer review">
+    <img src="https://learnvestor.com/wp-content/uploads/2025/11/6-724x1024.webp" alt="buyer review">
+    <img src="https://learnvestor.com/wp-content/uploads/2025/11/5-724x1024.webp" alt="buyer review">
+    <img src="https://learnvestor.com/wp-content/uploads/2025/11/4-724x1024.webp" alt="buyer review">
+    <img src="https://learnvestor.com/wp-content/uploads/2025/11/3-724x1024.webp" alt="buyer review">
+    <img src="https://learnvestor.com/wp-content/uploads/2025/11/8-724x1024.webp" alt="buyer review">
+    <img src="https://learnvestor.com/wp-content/uploads/2025/11/7-724x1024.webp" alt="buyer review">
+  </div>
+</div>
+
+<!-- ===== DIGITAL COPY BUY SECTION ===== -->
+<div class="section-dark" style="text-align:center; padding:40px 20px;">
+  <div class="section-inner">
+    <div class="section-title">💻 BUY <span>DIGITAL COPY</span></div>
+    <div style="font-size:44px; font-weight:900; color:#FEC000; font-family:'Montserrat',sans-serif;">
+      ₹390/-
+    </div>
+    <div style="text-decoration:line-through; color:#FEC000; opacity:0.6; font-size:18px; margin-bottom:16px;">₹1399</div>
+    <img src="https://learnvestor.com/wp-content/uploads/2025/11/The-Trading-Quintessence-4-Pillars-of-Market-Mastery-Candlesticks-Patterns-Psychology-and-Strategy-1024x1024.webp"
+      alt="digital combo" style="max-width:260px; width:100%; border-radius:14px; margin: 0 auto 20px; display:block; box-shadow:0 16px 48px rgba(254,192,0,0.3);">
+    <!-- BUY BUTTON #3 -->
+    <div class="buy-btn-wrap">
+      <a href="https://superprofile.bio/vp/5000--2d---3d-stories-bundle--71" class="buy-btn" style="font-size:20px; padding:20px 48px;">
+        🔥 BUY NOW &nbsp;<del>₹1399</del>&nbsp; ₹390/-
+      </a>
+      <div class="btn-label">✅ 4 BOOKS • INSTANT DOWNLOAD • LIFETIME ACCESS</div>
+    </div>
+  </div>
+</div>
+
+<div class="gold-divider"></div>
+
+<!-- ===== TRUST BAR ===== -->
+<div class="section">
+  <div class="trust-bar">
+    <div class="trust-num">5000+</div>
+    <div class="trust-label">Worldwide Learners Trust Us</div>
+    <div class="trust-row">
+      <div class="trust-stat"><div class="val">4.9/5</div><div class="lbl">Rating</div></div>
+      <div class="trust-stat"><div class="val">587+</div><div class="lbl">Written Reviews</div></div>
+      <div class="trust-stat"><div class="val">4 Books</div><div class="lbl">In One Combo</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== INSPIRING JOURNEY VIDEOS ===== -->
+<div class="section-dark">
+  <div class="section-inner">
+    <div class="section-title">🎥 Inspiring <span>Journey</span></div>
+    <div class="video-grid">
+      <div class="video-wrap">
+        <video src="https://learnvestor.com/wp-content/uploads/2025/11/AQMlIska93bxSW9UnNp9qbRdnCuRKzIyxj6ssUt3kp4tVD3hqbyuM-3DX4HBDT4aW4gUhadt3xUJw0u2x0VDzbz63lil3T8XBOg4ELI.mp4" controls preload="metadata" controlslist="nodownload" playsinline></video>
+        <div class="video-label">⚠️ DISCLAIMER: ONLY FOR LEARNING PURPOSE</div>
+      </div>
+      <div class="video-wrap">
+        <video src="https://learnvestor.com/wp-content/uploads/2025/11/AQPcQX4yXDVPpOfXuGGQD6VxW3VOBm0v79999vx6XQxUvG3muxnvWNGOeJ66eLR0WW6tX1md7bKHc4v_uWqGnTaBdmIYRASXudTTEXM.mp4" controls preload="metadata" controlslist="nodownload" playsinline></video>
+        <div class="video-label">⚠️ DISCLAIMER: ONLY FOR LEARNING PURPOSE</div>
+      </div>
+      <div class="video-wrap">
+        <video src="https://learnvestor.com/wp-content/uploads/2025/11/AQPN5fkAqSw69QXuiZinGe6PNsky89S6gqGrMN2ULEH9jMxLGXDF6ElIknHdxFs2FDcNLPU2YBgtO8BYDEj6nZ0B_DY9WJYOoqqRw08.mp4" controls preload="metadata" controlslist="nodownload" playsinline></video>
+        <div class="video-label">⚠️ DISCLAIMER: ONLY FOR LEARNING PURPOSE</div>
+      </div>
+      <div class="video-wrap">
+        <video src="https://learnvestor.com/wp-content/uploads/2025/11/AQOpW-npjK65BqMHo2zclt1V5OLWU4a2r7p0rjXbA4o79I0LcTPjf6mZBc_bJ6Jwwx50PwRV5dYePBvvqaCLzzRTqV1fApUYJN_cFu0.mp4" controls preload="metadata" controlslist="nodownload" playsinline></video>
+        <div class="video-label">⚠️ DISCLAIMER: ONLY FOR LEARNING PURPOSE</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FEATURES ===== -->
+<div class="section">
+  <div class="section-title">💡 WHY THIS <span>COMBO?</span></div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="icon">📚</div>
+      <h3>Practical & Hands-On</h3>
+      <p>Real charts, real logic, real practice — not just theory. Your success comes from applying what you learn.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📈</div>
+      <h3>Real-Market Learning</h3>
+      <p>Everything is based on live charts, actual market conditions, and patterns that work today.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🧠</div>
+      <h3>Expert-Curated System</h3>
+      <p>4 books combined into one powerful system: Candlesticks + Chart Patterns + Psychology + Strategy.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📊</div>
+      <h3>Step-By-Step Guidance</h3>
+      <p>Clear rules → exact entries → stop-loss → target setting → exit logic. For every level.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🔍</div>
+      <h3>Real Case Studies</h3>
+      <p>Before-after charts, trade breakdowns, and real-life market scenarios so concepts click.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">⭐</div>
+      <h3>4.9/5 Average Rating</h3>
+      <p>Our education consistently earns an average 4.9/5 rating from thousands of students worldwide.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== COMBO OUTCOME / CASE STUDY ===== -->
+<div class="section-dark">
+  <div class="section-inner">
+    <div class="section-title">🏆 COMBO <span>Outcome</span></div>
+    <div class="case-study-title">Learning Journeys: Learners Case Studies</div>
+  </div>
+</div>
+
+<!-- ===== WHAT LEARNERS SAY - WRITTEN REVIEWS ===== -->
+<div class="section">
+  <div class="section-title">💬 WHAT LEARNERS <span>SAY</span></div>
+  <p style="text-align:center; color:#888; font-size:13px; margin-bottom:24px;">Don't take our word for it, see what our members are saying.</p>
+
+  <!-- Review 1 -->
+  <div class="review-card">
+    <div class="reviewer-row">
+      <img class="reviewer-avatar" src="https://learnvestor.com/wp-content/uploads/2025/11/image-2.webp" alt="Rohan M.">
+      <div>
+        <div class="reviewer-name">Rohan M.</div>
+        <div class="reviewer-exp">5+ Yr exp in trading</div>
+      </div>
+      <div style="margin-left:auto; font-size:20px;">📊</div>
+    </div>
+    <div class="review-text" id="r1">I'm currently using the Learnvestor Trading Mastery Books Combo, and I have to say — this is hands down the best trading resource I've ever invested in. It doesn't just give you theories or definitions; it actually teaches you how to think like a real trader. Every concept is explained in a simple, practical, directly applicable way. What impressed me most is how clear, structured, and step-by-step everything is. I've already applied multiple techniques and can see a BIG difference in my trading — better timing, more confidence, cleaner entries, and far fewer emotional trades. Highly recommended for anyone serious about becoming a disciplined, profitable trader.</div>
+    <button class="read-more-btn" onclick="toggleReview('r1', this)">Read more ▼</button>
+  </div>
+
+  <!-- Review 2 -->
+  <div class="review-card">
+    <div class="reviewer-row">
+      <img class="reviewer-avatar" src="https://learnvestor.com/wp-content/uploads/2025/11/image-9.webp" alt="Vikram Kulkarni">
+      <div>
+        <div class="reviewer-name">Vikram Kulkarni</div>
+        <div class="reviewer-exp">10+ Yr exp in Forex</div>
+      </div>
+      <div style="margin-left:auto; font-size:20px;">📊</div>
+    </div>
+    <div class="review-text" id="r2">What I love most about this combo is that it doesn't assume you already know trading. It literally takes you from zero to system-level knowledge in the most simple and structured way. The candlestick explanations are the cleanest I've ever seen. I've started applying the continuation setups and my timing has improved massively. If you want to avoid years of trial and error, just get this combo. It's easily the smartest investment I've made in my trading journey.</div>
+    <button class="read-more-btn" onclick="toggleReview('r2', this)">Read more ▼</button>
+  </div>
+
+  <!-- Review 3 -->
+  <div class="review-card">
+    <div class="reviewer-row">
+      <img class="reviewer-avatar" src="https://learnvestor.com/wp-content/uploads/2025/11/avani-alti.jpg" alt="Avani Sharma">
+      <div>
+        <div class="reviewer-name">Avani Sharma</div>
+        <div class="reviewer-exp">2 Yr exp in trading</div>
+      </div>
+      <div style="margin-left:auto; font-size:20px;">📊</div>
+    </div>
+    <div class="review-text" id="r3">I've bought so many trading books before, but nothing even comes close to how practical the Learnvestor Trading Mastery Books Combo is. Every chapter feels like a coaching session. Within just a week, I finally understood why my entries were wrong, how to place a proper stop-loss, and how to avoid fake breakouts. The RRR section alone changed the way I trade. This isn't just a book combo… it's a full trading mindset shift. Absolutely worth every rupee.</div>
+    <button class="read-more-btn" onclick="toggleReview('r3', this)">Read more ▼</button>
+  </div>
+
+  <!-- Review 4 -->
+  <div class="review-card">
+    <div class="reviewer-row">
+      <img class="reviewer-avatar" src="https://learnvestor.com/wp-content/uploads/2025/11/image.webp" alt="Yash Reddy">
+      <div>
+        <div class="reviewer-name">Yash Reddy</div>
+        <div class="reviewer-exp">Beginner in trading</div>
+      </div>
+      <div style="margin-left:auto; font-size:20px;">📊</div>
+    </div>
+    <div class="review-text" id="r4">I work a full-time job, so I never had time to study trading properly. But the Learnvestor combo made everything so clear and actionable. What shocked me was how quickly things "clicked." Suddenly I knew exactly when to enter, what stop-loss to use, and when NOT to trade. My confidence has grown like crazy. If you want something that gives clarity, structure, and confidence, this is it.</div>
+    <button class="read-more-btn" onclick="toggleReview('r4', this)">Read more ▼</button>
+  </div>
+</div>
+
+<!-- ===== CHECK YOUR THOUGHTS ===== -->
+<div class="section-dark">
+  <div class="section-inner">
+    <div class="section-title">🤔 Check the thoughts that are <span>TRUE</span> for you.</div>
+    <div class="thought-item"><span class="emoji">😓</span><p>Wondering why your trades hit stop-loss even when the setup looks perfect?</p></div>
+    <div class="thought-item"><span class="emoji">😤</span><p>Fed up with emotional trading and want rule-based discipline?</p></div>
+    <div class="thought-item"><span class="emoji">😕</span><p>Confused about how to read candlesticks the <em>right</em> way (beyond basic patterns)?</p></div>
+    <div class="thought-item"><span class="emoji">🤯</span><p>Struggling to spot real breakouts vs fake breakouts that trap beginners?</p></div>
+    <div class="thought-item"><span class="emoji">🔍</span><p>Looking for a complete trading system you can follow daily without overthinking?</p></div>
+    <div class="thought-item"><span class="emoji">📉</span><p>Unsure how to set smart targets, stop-loss, and Risk–Reward for consistent profits?</p></div>
+    <div class="thought-item"><span class="emoji">📈</span><p>Want to learn chart patterns that actually work in real markets, not just theory?</p></div>
+    <div style="text-align:center; margin-top:20px; font-size:15px; font-weight:700; color:#fff;">
+      Did any thought resemble? If so, you're eligible to <span style="color:#e53935;">learn trading</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FAQ ===== -->
+<div class="section">
+  <div class="section-title">❓ FAQ's</div>
+  <div class="faq-wrap">
+    <div class="faq">
+      <details>
+        <summary>Q1. What is this 4-in-1 Master Trading Books Combo?</summary>
+        <div class="panel">It is a purely educational trading Books Combo that teaches candlesticks, chart patterns, price action, and trading psychology in a simple and practical way.</div>
+      </details>
+      <details>
+        <summary>Q2. Does this Books Combo give guaranteed profits?</summary>
+        <div class="panel">No. This Books Combo is only for learning purposes. Trading involves risk, and no course or strategy can guarantee profit under any circumstances.</div>
+      </details>
+      <details>
+        <summary>Q3. Are you SEBI registered?</summary>
+        <div class="panel">No, we are not SEBI registered, and we do not provide stock tips, signals, personalised financial advice, or buy/sell recommendations.</div>
+      </details>
+      <details>
+        <summary>Q4. Will I get buy/sell or stock recommendations?</summary>
+        <div class="panel">No. You will only receive educational content. No advisory, no signals, and no recommendations are provided.</div>
+      </details>
+      <details>
+        <summary>Q5. Is this combo suitable for beginners?</summary>
+        <div class="panel">Yes, the entire content is beginner friendly.</div>
+      </details>
+      <details>
+        <summary>Q6. Do I get lifetime access?</summary>
+        <div class="panel">Yes. Once purchased, you get lifetime access through our online platform, accessible on mobile, tablet, and laptop.</div>
+      </details>
+      <details>
+        <summary>Q7. Is this books combo compliant with Indian Government &amp; SEBI rules?</summary>
+        <div class="panel">Yes. Since this COMBO provides only educational content and no stock tips or advisory service, it is fully compliant with SEBI and Indian Government guidelines.</div>
+      </details>
+    </div>
+  </div>
+</div>
+
+<div class="disclaimer">⚠️ Trading involves financial risk. This product is for educational purposes only. Past performance is not indicative of future results.</div>
+<div class="footer-space"></div>
+
+<!-- ===== STICKY BOTTOM CTA ===== -->
+<div class="sticky-cta">
+  <a href="https://superprofile.bio/vp/5000--2d---3d-stories-bundle--71" aria-label="Buy digital copy">
+    <span>🛒 BUY DIGITAL COPY</span>
+    <span class="price">
+      <span class="old">₹1399</span>
+      <span class="new">₹390/-</span>
+    </span>
+  </a>
+</div>
+
+<script>
+  function toggleReview(id, btn) {
+    const el = document.getElementById(id);
+    el.classList.toggle('expanded');
+    btn.textContent = el.classList.contains('expanded') ? 'Read less ▲' : 'Read more ▼';
+  }
+
+  // Fix body padding for sticky bar
+  (function(){
+    const bar = document.querySelector('.sticky-cta');
+    if (!bar) return;
+    const setPad = () => { document.body.style.paddingBottom = (bar.offsetHeight + 10) + 'px'; };
+    window.addEventListener('load', setPad);
+    window.addEventListener('resize', setPad);
+    setPad();
+  })();
+</script>
+
+</body>
+</html>
